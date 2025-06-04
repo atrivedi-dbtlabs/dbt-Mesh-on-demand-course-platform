@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: ""
+    columns:
+      - name: order_id
+        data_type: varchar
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: location_id
+        data_type: varchar
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: customer_id
+        data_type: varchar
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: order_total
+        data_type: number
+        description: ""
+
+      - name: tax_paid
+        data_type: number
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: ordered_at
+        data_type: timestamp_ntz
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: customer_name
+        data_type: varchar
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: location_name
+        data_type: varchar
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: tax_rate
+        data_type: number
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: location_opened_at
+        data_type: timestamp_ntz
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: ordered_month
+        data_type: number
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: ordered_day
+        data_type: number
+        constraints:
+          - type: not_null
+        description: ""
+
+      - name: ordered_year
+        data_type: number
+        constraints:
+          - type: not_null
+        description: ""
