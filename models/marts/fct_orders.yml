@@ -2,7 +2,11 @@ version: 2
 
 models:
   - name: fct_orders
+    latest_version: 1
     description: ""
+    config:
+      contract:
+        enforced: true
     columns:
       - name: order_id
         data_type: varchar
@@ -79,3 +83,16 @@ models:
         constraints:
           - type: not_null
         description: ""
+
+    versions:
+      - v: 1
+        config:
+          alias: fct_orders
+      - v: 2
+        columns:
+          - include: all
+            exclude: [order_total, location_opened_at]
+          - name: order_amount
+            data_type: number
+          - name: location_opened_at
+            data_type: date
