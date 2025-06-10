@@ -4,7 +4,7 @@ models:
   - name: fct_orders
     access: public
     group: finance
-    latest_version: 1
+    latest_version: 2
     description: ""
     config:
       contract:
@@ -88,12 +88,12 @@ models:
 
     versions:
       - v: 1
+      - v: 2
         config:
           alias: fct_orders
-      - v: 2
         columns:
           - include: all
-            exclude: [order_total, location_opened_at]
+            exclude: [order_total]
           - name: order_amount
             data_type: number
           - name: location_opened_at
