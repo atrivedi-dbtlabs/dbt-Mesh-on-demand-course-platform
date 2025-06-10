@@ -2,6 +2,6 @@ models:
   - name: int_orders
     columns:
       - name: order_id
-        data_tests:
+        tests:
           - unique
           - not_null
